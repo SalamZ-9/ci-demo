@@ -17,3 +17,30 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(5, 0)
+
+from calculator import subtract
+from calculator import multiply
+
+
+def test_subtract_positive():
+    assert subtract(5, 3) == 2
+
+
+def test_subtract_negative():
+    assert subtract(-5, -3) == -2
+
+
+def test_subtract_zero():
+    assert subtract(5, 0) == 5
+
+
+def test_multiply_positive():
+    assert multiply(2, 3) == 6
+
+
+def test_multiply_negative():
+    assert multiply(-2, 3) == -6
+
+
+def test_multiply_zero():
+    assert multiply(5, 0) == 0
